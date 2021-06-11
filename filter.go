@@ -1,6 +1,5 @@
 package main
 
-
 func Filter(s []int, fn func(int) bool) []int {
 	var newSlice []int
 	for _, value := range s{

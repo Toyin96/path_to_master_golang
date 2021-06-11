@@ -18,22 +18,23 @@ func task(a...int) int {
 	return value
 }
 
+
 func main() {
 
-	 insertion := []string{"I", "am", "happy"}
-	 slice := []string{"Toyin", "is", "age", "school"}
+	test := []byte{'A', 'B', 'B', 'A', 'A', 'C', 'C'}
 
-	result := func (slice, insertion []string, index int) []string {
-		newSlice := slice[:index]
-		fmt.Println(slice)
-		copy(slice, insertion)
-		fmt.Println(slice)
-		after := slice[index:]
-		newSlice = append(newSlice, slice...)
-		newSlice = append(newSlice, after...)
-		return newSlice
-	}(slice, insertion, 1)
+	newByte := []byte{}
 
-	fmt.Println(result)
+	temp := byte(0)
+	for _, value := range test{
+		if value != temp{
+			newByte = append(newByte, value)
+		}
+		temp = value
+	}
+
+	fmt.Printf("%c\n", newByte)
+
+	fmt.Println(StringReverser("Google"))
 
 }
