@@ -21,20 +21,6 @@ func task(a...int) int {
 
 func main() {
 
-	test := []byte{'A', 'B', 'B', 'A', 'A', 'C', 'C'}
-
-	newByte := []byte{}
-
-	temp := byte(0)
-	for _, value := range test{
-		if value != temp{
-			newByte = append(newByte, value)
-		}
-		temp = value
-	}
-
-	fmt.Printf("%c\n", newByte)
-
-	fmt.Println(StringReverser("Google"))
-
+	value := LinkedListCreator(4)
+	fmt.Println(*value)
 }
